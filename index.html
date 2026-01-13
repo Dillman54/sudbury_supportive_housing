@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sudbury's Supportive Housing Program - Recovery-focused sober living at 30 Ste Anne Road. Private rooms with wraparound support for individuals 30+ days sober.">
+    <title>Sudbury's Supportive Housing - Recovery Intake | 30 Ste Anne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --mint: #3eb489;
+            --mint-dark: #2d8968;
+            --mint-darker: #236b52;
+            --mint-light: #5bc9a0;
+            --sage: #87a96b;
+            --seafoam: #93e9be;
+            --jade: #00a86b;
+            --forest: #2f4f4f;
+            --slate: #4a5d5d;
+            --ash: #708090;
+            --silver: #b8c5c5;
+            --cloud: #e8f5f0;
+            --pearl: #f5faf8;
+            --cream: #fdfff9;
+            --gold: #d4af37;
+            --coral: #ff7f50;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--forest);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+        
+        /* Skip Navigation Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--mint-dark);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100000;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Custom Icon Styles */
+        .custom-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        
+        .custom-icon-large {
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Hero Section - Recovery Focus */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(170deg, var(--mint) 0%, var(--mint-light) 40%, var(--seafoam) 100%);
+            overflow: hidden;
+        }
+        
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.45;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .partnership-badge {
+            display: inline-block;
+            background: white;
+            color: var(--mint-dark);
+            padding: 10px 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .hero-logo {
+            margin-bottom: 30px;
+        }
+        
+        .hero-logo svg {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            color: white;
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            margin-bottom: 50px;
+            font-weight: 300;
+            color: var(--pearl);
+            line-height: 1.5;
+        }
+        
+        /* Key Stats Bar */
+        .stats-bar {
+            background: var(--cloud);
+            padding: 40px 60px;
+            border-top: 3px solid var(--mint);
+            border-bottom: 1px solid var(--silver);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--mint-dark);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: var(--slate);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--mint);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        
+        /* Header CTA - Apply Now Button */
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+            min-width: 220px;
+            background: var(--mint-darker);
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        
+        .nav-cta:hover,
+        .nav-cta:focus {
+            background: var(--forest);
+            outline: none;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex: 1;
+        }
+        
+        nav li {
+            display: inline-block;
+        }
+        
+        nav a:not(.nav-cta) {
+            display: inline-block;
+            color: var(--forest);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 25px 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            border-right: 1px solid var(--cloud);
+        }
+        
+        nav li:last-child a:not(.nav-cta) {
+            border-right: none;
+        }
+        
+        nav a:not(.nav-cta):hover,
+        nav a:not(.nav-cta):focus {
+            background: var(--mint);
+            color: white;
+            outline: none;
+        }
+        
+        nav a:not(.nav-cta):focus {
+            box-shadow: inset 0 -3px 0 white;
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 80px;
+            position: relative;
+            border-bottom: 1px solid var(--cloud);
+        }
+        
+        section:nth-child(odd):not(.cta-section) {
+            background: white;
+        }
+        
+        section:nth-child(even):not(.cta-section) {
+            background: var(--pearl);
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--mint-light);
+            color: white;
+            padding: 8px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.75rem;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+            color: var(--forest);
+            line-height: 1.1;
+        }
+        
+        .lead-text {
+            font-size: 1.4rem;
+            color: var(--slate);
+            margin-bottom: 50px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            margin: 60px 0 30px;
+            color: var(--mint-dark);
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        p {
+            color: var(--slate);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        /* Eligibility Section Background */
+        #eligibility {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .eligibility-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1559305289-4c31700ba9cb?q=80&w=2073');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            z-index: 0;
+        }
+        
+        #eligibility > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Alignment Cards (used for eligibility check) */
+        .alignment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .alignment-card {
+            background: white;
+            border: 2px solid var(--cloud);
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .alignment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--mint);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .alignment-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .alignment-card:hover {
+            border-color: var(--mint-light);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(62, 180, 137, 0.15);
+        }
+        
+        .alignment-number {
+            display: inline-block;
+            background: var(--mint);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .alignment-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--forest);
+            font-weight: 700;
+        }
+        
+        .alignment-card p {
+            color: var(--slate);
+            line-height: 1.7;
+        }
+        
+        /* Service Model Visualization */
+        .service-model {
+            background: var(--cloud);
+            padding: 60px;
+            border-radius: 12px;
+            margin: 60px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .pillar {
+            text-align: center;
+        }
+        
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--mint), var(--mint-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .pillar h4 {
+            color: var(--forest);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .pillar p {
+            color: var(--slate);
+            font-size: 0.95rem;
+        }
+        
+        /* Features Section Background */
+        #features {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .features-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            z-index: 0;
+        }
+        
+        #features > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Impact Metrics */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            margin: 60px 0;
+            border: 2px solid var(--mint-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .impact-cell {
+            padding: 40px;
+            background: white;
+            border-right: 1px solid var(--cloud);
+            border-bottom: 1px solid var(--cloud);
+        }
+        
+        .impact-cell:nth-child(2n) {
+            border-right: none;
+        }
+        
+        .impact-cell:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+        
+        .impact-metric {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--mint-dark);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .impact-label {
+            color: var(--forest);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .impact-detail {
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Partnership Model */
+        .partnership-structure {
+            background: var(--pearl);
+            padding: 50px;
+            margin: 60px 0;
+            border-left: 4px solid var(--mint);
+            border-radius: 8px;
+        }
+        
+        .partner-role {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--cloud);
+        }
+        
+        .partner-role:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .partner-name {
+            color: var(--mint-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .partner-responsibility {
+            color: var(--forest);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .partner-details {
+            color: var(--slate);
+            line-height: 1.7;
+        }
+        
+        /* Process Section Background */
+        #process {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1556075798-4825dfaaf498?q=80&w=2076');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            z-index: 0;
+        }
+        
+        #process > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Timeline */
+        .timeline-container {
+            position: relative;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-date {
+            text-align: right;
+            padding-top: 10px;
+        }
+        
+        .timeline-date span {
+            background: var(--mint);
+            color: white;
+            padding: 8px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-left: 3px solid var(--mint-light);
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-content:hover {
+            transform: translateX(10px);
+            border-left-color: var(--mint-dark);
+            box-shadow: 0 4px 15px rgba(62, 180, 137, 0.15);
+        }
+        
+        .timeline-content h4 {
+            color: var(--forest);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* CTA Section - SOLID DARK BACKGROUND */
+        .cta-section {
+            background: #1e3a3a !important;
+            padding: 120px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 50%, rgba(0,0,0,0.15) 100%);
+            pointer-events: none;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ffffff !important;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cta-subtitle {
+            font-size: 1.4rem;
+            color: #ffffff !important;
+            margin-bottom: 50px;
+            line-height: 1.6;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 2px solid white;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card:hover {
+            background: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-card h4 {
+            color: var(--mint-dark);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        .contact-card p {
+            color: var(--forest);
+            line-height: 1.6;
+        }
+        
+        .contact-card a {
+            color: var(--mint-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Partner Referrals Box - SOLID BACKGROUND */
+        .partner-referrals-box {
+            background: #2a4a4a;
+            border: 2px solid var(--mint);
+            border-radius: 8px;
+            padding: 35px;
+            margin: 50px 0;
+        }
+        
+        .partner-referrals-box h3 {
+            color: var(--seafoam);
+            font-size: 1.6rem;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+        }
+        
+        .partner-referrals-box p {
+            color: #ffffff;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .partner-referrals-box a {
+            color: var(--seafoam);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        .partner-referrals-box a:hover {
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 20px 60px;
+            background: white;
+            color: var(--mint-dark);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            background: var(--cream);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Button Container */
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Hover Effects */
+        .action-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--mint-dark);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(45, 137, 104, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .action-button:hover::before {
+            left: 100%;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(45, 137, 104, 0.4);
+            background: var(--mint-darker);
+        }
+        
+        /* Gallery Button */
+        .gallery-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(62, 180, 137, 0.3);
+            margin-left: 20px;
+        }
+        
+        .gallery-button:hover {
+            background: linear-gradient(135deg, var(--mint-light) 0%, var(--mint) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(62, 180, 137, 0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            section {
+                padding: 60px 40px;
+            }
+            
+            .service-pillars {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .alignment-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-cell {
+                border-right: none !important;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .timeline-date {
+                text-align: left;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-cta {
+                padding: 18px 40px;
+                justify-content: center;
+                min-width: auto;
+                font-size: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a:not(.nav-cta) {
+                padding: 15px 12px;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gallery-button {
+                margin-left: 0;
+            }
+            
+            .cta-section {
+                padding: 80px 30px;
+            }
+            
+            .cta-title {
+                font-size: 2.2rem;
+            }
+            
+            .cta-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .stats-bar {
+                padding: 30px 20px;
+            }
+            
+            .stat-value {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .service-pillars {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content {
+                padding: 40px 20px;
+            }
+            
+            section {
+                padding: 50px 20px;
+            }
+            
+            .service-model {
+                padding: 30px 20px;
+            }
+            
+            .alignment-card {
+                padding: 30px 25px;
+            }
+            
+            nav a:not(.nav-cta) {
+                padding: 12px 10px;
+                font-size: 0.65rem;
+                border-right: none;
+                border-bottom: 1px solid var(--cloud);
+            }
+            
+            .contact-grid {
+                gap: 20px;
+            }
+            
+            .partner-referrals-box {
+                padding: 25px 20px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#eligibility" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-bg-image" role="presentation"></div>
+            <div class="hero-content">
+                <!-- Logo -->
+                <div class="hero-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="180" height="200" aria-label="Sudbury's Supportive Housing Logo">
+                      <!-- Green leaf/chevron accent at top -->
+                      <path d="M100 8 L125 32 L100 26 L75 32 Z" fill="#3eb489"/>
+                      <path d="M100 16 L118 34 L100 29 L82 34 Z" fill="#2d8968"/>
+                      
+                      <!-- House roof -->
+                      <path d="M100 28 L175 88 L163 88 L163 100 L37 100 L37 88 L25 88 Z" fill="#1a3a5c"/>
+                      
+                      <!-- House body -->
+                      <rect x="42" y="100" width="116" height="75" fill="#1a3a5c"/>
+                      
+                      <!-- Inner house cutout (white area) -->
+                      <rect x="52" y="105" width="96" height="60" fill="#ffffff"/>
+                      
+                      <!-- People figures inside house -->
+                      <!-- Center figure (larger, with raised arms) -->
+                      <circle cx="100" cy="118" r="9" fill="#1a3a5c"/>
+                      <path d="M100 127 L100 150" stroke="#1a3a5c" stroke-width="5" stroke-linecap="round"/>
+                      <path d="M82 135 Q100 125 118 135" stroke="#1a3a5c" stroke-width="5" fill="none" stroke-linecap="round"/>
+                      
+                      <!-- Left figure (smaller) -->
+                      <circle cx="68" cy="125" r="7" fill="#1a3a5c"/>
+                      <path d="M68 132 L68 152" stroke="#1a3a5c" stroke-width="4" stroke-linecap="round"/>
+                      <path d="M55 140 Q68 133 78 138" stroke="#1a3a5c" stroke-width="4" fill="none" stroke-linecap="round"/>
+                      
+                      <!-- Right figure (smaller) -->
+                      <circle cx="132" cy="125" r="7" fill="#1a3a5c"/>
+                      <path d="M132 132 L132 152" stroke="#1a3a5c" stroke-width="4" stroke-linecap="round"/>
+                      <path d="M122 138 Q132 133 145 140" stroke="#1a3a5c" stroke-width="4" fill="none" stroke-linecap="round"/>
+                      
+                      <!-- Text below -->
+                      <text x="100" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1a3a5c" font-weight="400" letter-spacing="1">SUDBURY'S</text>
+                      <text x="100" y="210" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#1a3a5c" font-weight="700">Supportive Housing</text>
+                    </svg>
+                </div>
+                
+                <div class="partnership-badge">30+ Days Sober? You're Ready</div>
+                <h1>Your Recovery Journey<br>
+                Starts With Stable Housing<br>
+                At 30 Ste Anne</h1>
+                <p class="subtitle">
+                    Private rooms, professional support, and a recovery community that understands. 
+                    Transform your life with comprehensive wraparound services designed for lasting success.
+                </p>
+            </div>
+        </header>
+        
+        <!-- Stats Bar -->
+        <aside class="stats-bar" aria-label="Key Program Features">
+            <div class="stats-container">
+                <div class="stat">
+                    <span class="stat-value">135</span>
+                    <span class="stat-label">Private Rooms</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">12-18</span>
+                    <span class="stat-label">Months Typical Stay</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">24/7</span>
+                    <span class="stat-label">Support Services</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">$900</span>
+                    <span class="stat-label">Monthly (OW/ODSP)</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Navigation -->
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="https://forms.monday.com/forms/cf24c85d4581488165542fc332a17b0f?r=use1" class="nav-cta" target="_blank" rel="noopener">Apply Now →</a>
+                <ul role="list">
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#features">Your Room</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Eligibility Section -->
+            <section id="eligibility" aria-labelledby="eligibility-heading">
+                <div class="eligibility-bg" role="presentation"></div>
+                <div class="section-badge">Quick Eligibility Check</div>
+                <h2 id="eligibility-heading">Are You Ready for<br>Supportive Housing?</h2>
+                
+                <p class="lead-text">
+                    If you meet these four core requirements, you're ready to begin your application. 
+                    Our team will guide you through every step of the process.
+                </p>
+                
+                <div class="alignment-grid">
+                    <article class="alignment-card">
+                        <div class="alignment-number" aria-label="Requirement 1">✓</div>
+                        <h4>30+ Days Sober</h4>
+                        <p>You must have at least 30 days of documented sobriety from alcohol and substances. 
+                        This can be verified through treatment programs, detox facilities, or recovery support services.</p>
+                    </article>
+                    <article class="alignment-card">
+                        <div class="alignment-number" aria-label="Requirement 2">✓</div>
+                        <h4>18 Years or Older</h4>
+                        <p>Legal adult age requirement for residency. Our program is designed for adults 
+                        ready to take responsibility for their recovery journey.</p>
+                    </article>
+                    <article class="alignment-card">
+                        <div class="alignment-number" aria-label="Requirement 3">✓</div>
+                        <h4>Sudbury Connection</h4>
+                        <p>You must be a resident of Greater Sudbury or have established ties to the community 
+                        such as family, support services, employment, or treatment programs.</p>
+                    </article>
+                    <article class="alignment-card">
+                        <div class="alignment-number" aria-label="Requirement 4">✓</div>
+                        <h4>Recovery Commitment</h4>
+                        <p>Active engagement in recovery through counselling, 12-step groups, outpatient programs, 
+                        or mental health supports. Ready to participate in house meetings and programming.</p>
+                    </article>
+                </div>
+                
+                <div class="button-container">
+                    <a href="https://forms.monday.com/forms/cf24c85d4581488165542fc332a17b0f?r=use1" class="action-button" target="_blank" rel="noopener">
+                        START YOUR APPLICATION 
+                        <svg style="display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="white" aria-hidden="true" role="img">
+                            <title>Arrow Right</title>
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" aria-labelledby="features-heading">
+                <div class="features-bg" role="presentation"></div>
+                <div class="section-badge">Your New Home</div>
+                <h2 id="features-heading">Everything You Need<br>To Rebuild Your Life</h2>
+                
+                <p class="lead-text">
+                    More than just a room—it's your foundation for lasting recovery with comprehensive 
+                    support services and a community that understands your journey.
+                </p>
+                
+                <div class="service-model">
+                    <h3 style="color: var(--forest); text-align: center;">What's Included</h3>
+                    <div class="service-pillars">
+                        <article class="pillar">
+                            <div class="pillar-icon">🏠</div>
+                            <h4>Private Room</h4>
+                            <p>Furnished private room with secure entry, shared kitchen and bathroom facilities, all utilities included</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🤝</div>
+                            <h4>Case Management</h4>
+                            <p>Dedicated support worker, recovery planning, connection to health services, crisis intervention</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">💪</div>
+                            <h4>Life Skills</h4>
+                            <p>Employment readiness, financial literacy, cooking classes, community integration activities</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🧠</div>
+                            <h4>Mental Health</h4>
+                            <p>On-site counselling, psychiatric support, trauma-informed care, wellness programming</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">👥</div>
+                            <h4>Peer Support</h4>
+                            <p>Recovery groups, house meetings, alumni network, volunteer opportunities</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🛡️</div>
+                            <h4>Accountability</h4>
+                            <p>Random substance screening, curfew support, structured environment, clear expectations</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" aria-labelledby="services-heading">
+                <div class="section-badge">Comprehensive Support</div>
+                <h2 id="services-heading">Wraparound Services<br>For Lasting Recovery</h2>
+                
+                <p class="lead-text">
+                    Our partnership with local healthcare providers ensures you receive the comprehensive 
+                    support needed to address all aspects of recovery.
+                </p>
+                
+                <dl class="partnership-structure" aria-label="Service delivery structure">
+                    <div class="partner-role">
+                        <dt class="partner-name">Sudbury Supportive Housing</dt>
+                        <dd>
+                            <div class="partner-responsibility">24/7 Residential Support</div>
+                            <div class="partner-details">
+                                On-site case management, intake coordination, daily operations, resident support, 
+                                crisis intervention, and program delivery. Staff ratio of 1:25 ensuring 
+                                personalized attention throughout your stay.
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="partner-role">
+                        <dt class="partner-name">Clinical Partners</dt>
+                        <dd>
+                            <div class="partner-responsibility">Addiction & Mental Health Services</div>
+                            <div class="partner-details">
+                                Partnership with local treatment centers providing substance use counselling, 
+                                psychiatric services, medication management, and specialized programming for 
+                                concurrent disorders.
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="partner-role">
+                        <dt class="partner-name">Community Services</dt>
+                        <dd>
+                            <div class="partner-responsibility">Life Skills & Integration</div>
+                            <div class="partner-details">
+                                Employment support, education upgrading, volunteer placement, recreation programs, 
+                                and connections to permanent housing options when you're ready to transition.
+                            </div>
+                        </dd>
+                    </div>
+                </dl>
+
+                <h3>Priority Given To</h3>
+                
+                <div class="impact-grid">
+                    <div class="impact-cell">
+                        <span class="impact-metric">✓</span>
+                        <span class="impact-label">Recently Completed Treatment</span>
+                        <span class="impact-detail">Direct admission from detox or treatment programs</span>
+                    </div>
+                    <div class="impact-cell">
+                        <span class="impact-metric">✓</span>
+                        <span class="impact-label">Experiencing Homelessness</span>
+                        <span class="impact-detail">Currently without stable housing</span>
+                    </div>
+                    <div class="impact-cell">
+                        <span class="impact-metric">✓</span>
+                        <span class="impact-label">Referred by Partners</span>
+                        <span class="impact-detail">Healthcare or social service agency referrals</span>
+                    </div>
+                    <div class="impact-cell">
+                        <span class="impact-metric">✓</span>
+                        <span class="impact-label">Demonstrated Motivation</span>
+                        <span class="impact-detail">Clear commitment to recovery goals</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="process" aria-labelledby="process-heading">
+                <div class="process-bg" role="presentation"></div>
+                <div class="section-badge">Simple Application</div>
+                <h2 id="process-heading">Your Path to<br>Stable Housing</h2>
+                
+                <p class="lead-text">
+                    From application to move-in, we make the process straightforward and supportive. 
+                    Most applicants complete the entire process within 1-2 weeks.
+                </p>
+                
+                <div class="timeline-container" role="region" aria-label="Application Timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span>Step 1</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Submit Application</h4>
+                            <p>Complete our intake form online or with help from your case worker. Include proof of 30-day sobriety and any supporting documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span>Step 2</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phone Screening</h4>
+                            <p>Brief 15-minute call to confirm eligibility, answer your questions, and schedule your intake interview.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span>Step 3</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Intake Interview</h4>
+                            <p>Meet with our team to discuss your recovery goals, housing needs, and develop your initial support plan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span>Step 4</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Acceptance & Move-In</h4>
+                            <p>Receive your acceptance letter, sign the Sober Living Agreement, and move into your new home with orientation support.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requirements Section -->
+            <section id="requirements" aria-labelledby="requirements-heading">
+                <div class="section-badge">Program Expectations</div>
+                <h2 id="requirements-heading">What We Ask<br>Of Our Residents</h2>
+                
+                <p class="lead-text">
+                    Success in supportive housing requires commitment. Here's what we expect from every resident 
+                    to maintain a safe, supportive environment for all.
+                </p>
+                
+                <div class="service-model">
+                    <h3 style="color: var(--forest); text-align: center;">Resident Commitments</h3>
+                    <div class="service-pillars">
+                        <article class="pillar">
+                            <div class="pillar-icon">📋</div>
+                            <h4>Program Participation</h4>
+                            <p>Attend weekly house meetings, engage with your case manager, participate in life skills programming</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🚫</div>
+                            <h4>Maintain Sobriety</h4>
+                            <p>Zero tolerance for substances on-site, agree to random screening, commitment to abstinence</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🤝</div>
+                            <h4>Respect Community</h4>
+                            <p>Follow house rules, respect quiet hours, contribute to chores, support fellow residents</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">💰</div>
+                            <h4>Financial Responsibility</h4>
+                            <p>Pay program fees on time ($900/month), work with staff on budgeting, save for future housing</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">🎯</div>
+                            <h4>Recovery Plan</h4>
+                            <p>Work on personal recovery goals, attend counselling or groups, prepare for independent living</p>
+                        </article>
+                        <article class="pillar">
+                            <div class="pillar-icon">✅</div>
+                            <h4>Follow Guidelines</h4>
+                            <p>Respect curfews, visitor policies, maintain room cleanliness, comply with safety protocols</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section" id="contact" aria-labelledby="contact-heading" style="background: #1e3a3a !important;">
+                <div class="cta-content">
+                    <h2 id="contact-heading" class="cta-title" style="color: #ffffff !important;">Ready to Take<br>The Next Step?</h2>
+                    
+                    <p class="cta-subtitle" style="color: #ffffff !important;">
+                        Stable housing is the foundation of successful recovery. Our team is here to help 
+                        you begin your journey to independence and wellness.
+                    </p>
+                    
+                    <div class="contact-grid">
+                        <article class="contact-card">
+                            <h4>Call Us</h4>
+                            <p>
+                                <strong>705-555-0199</strong><br>
+                                Monday-Friday<br>
+                                9:00 AM - 5:00 PM
+                            </p>
+                        </article>
+                        <article class="contact-card">
+                            <h4>Email</h4>
+                            <p>
+                                <strong><a href="/cdn-cgi/l/email-protection#9df4f3e9fcf6f8ddaeadeee9f8fcf3f3f8b3fefc"><span class="__cf_email__" data-cfemail="543d3a20353f31146764272031353a3a317a3735">[email&#160;protected]</span></a></strong><br>
+                                For applications<br>
+                                and general inquiries
+                            </p>
+                        </article>
+                        <article class="contact-card">
+                            <h4>Visit</h4>
+                            <p>
+                                <strong>30 Ste Anne Road</strong><br>
+                                Sudbury, ON P3C 5E1<br>
+                                By appointment only
+                            </p>
+                        </article>
+                    </div>
+                    
+                    <div class="partner-referrals-box">
+                        <h3>Partner Referrals Welcome</h3>
+                        <p>
+                            Healthcare providers, treatment centers, and social service agencies can submit 
+                            direct referrals through our partner portal. Contact <strong><a href="/cdn-cgi/l/email-protection#47372635332922353407747734332226292922692426"><span class="__cf_email__" data-cfemail="bacadbc8ced4dfc8c9fa898ac9cedfdbd4d4df94d9db">[email&#160;protected]</span></a></strong> 
+                            for referral forms and partnership information.
+                        </p>
+                    </div>
+                    
+                    <a href="h

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="200" height="180">
+  <!-- Green leaf/chevron accent at top -->
+  <path d="M100 5 L120 25 L100 20 L80 25 Z" fill="#3eb489"/>
+  <path d="M100 12 L115 28 L100 24 L85 28 Z" fill="#2d8968"/>
+  
+  <!-- House roof -->
+  <path d="M100 20 L170 75 L160 75 L160 85 L40 85 L40 75 L30 75 Z" fill="#1a3a5c"/>
+  
+  <!-- House body -->
+  <rect x="45" y="85" width="110" height="70" fill="#1a3a5c"/>
+  
+  <!-- Inner house cutout (lighter area) -->
+  <rect x="55" y="90" width="90" height="55" fill="#ffffff"/>
+  
+  <!-- People figures inside house -->
+  <!-- Center figure (larger) -->
+  <circle cx="100" cy="105" r="8" fill="#1a3a5c"/>
+  <path d="M100 113 Q100 125 100 135 M85 125 Q100 118 115 125" stroke="#1a3a5c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Left figure -->
+  <circle cx="72" cy="110" r="6" fill="#1a3a5c"/>
+  <path d="M72 116 Q72 126 72 133 M62 123 Q72 118 82 123" stroke="#1a3a5c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Right figure -->
+  <circle cx="128" cy="110" r="6" fill="#1a3a5c"/>
+  <path d="M128 116 Q128 126 128 133 M118 123 Q128 118 138 123" stroke="#1a3a5c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Door at bottom -->
+  <rect x="88" y="130" width="24" height="25" rx="2" fill="#1a3a5c"/>
+</svg>
